@@ -3,14 +3,7 @@ import React from 'react';
 const RegisterBudget = (props) => (
             <div>
 
-                <div class="input-group mb-3">
-  <span class="input-group-text" id="basic-addon1">BDI Serv</span>
-  <input type="text" class="form-control" placeholder="BDI" aria-label="Username" aria-describedby="basic-addon1"/>
-  <span class="input-group-text" id="basic-addon1">EBISA K</span>
-  <input type="text" class="form-control" placeholder="EBISA" aria-label="Username" aria-describedby="basic-addon1"/>
-  <span class="input-group-text" id="basic-addon1">Database</span>
-  <input type="text" class="form-control" placeholder="Database" aria-label="Username" aria-describedby="basic-addon1"/>
-</div>
+              
     <div className="container">
         <h2>Cadastrar Item</h2>
     <form class="row g-3 needs-validation" novalidate>
@@ -41,7 +34,11 @@ const RegisterBudget = (props) => (
     <select class="form-select" id="validationCustom04" required>
       <option selected disabled value="">Selecione</option>
       <option>M²</option>
-      <option>KM²</option>
+      <option>M³</option>
+      <option>TON</option>
+      <option>UND</option>
+      <option>Hora</option>
+      <option>M³/KM</option>
     </select>
 
   </div>
@@ -67,9 +64,6 @@ const RegisterBudget = (props) => (
   <div class="col-12">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required/>
-      <label class="form-check-label" for="invalidCheck">
-        Agree to terms and conditions
-      </label>
     </div>
   </div>
   <div class="col-12">

@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "fe93eb5b-23fe-47e3-b866-a2e4cfac83db",
+		"name": "Hyperledger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Init Ledger",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "ec2-18-230-17-198.sa-east-1.compute.amazonaws.com:8000/initledger",
+					"host": [
+						"ec2-18-230-17-198",
+						"sa-east-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"initledger"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Asset Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"assetId\": \"asset002\",\r\n    \"itemId\":\"item001\",\r\n    \"itemRef\": \"item001\",\r\n    \"itemCod\": \"nomedoitem\",\r\n    \"itemDesc\":\"asset4\",\r\n    \"itemUnid\": \"m2\",\r\n    \"itemQuant\": 0,\r\n    \"itemPrecUnit\": 0,\r\n    \"itemVlrTotalBDI\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "ec2-18-230-17-198.sa-east-1.compute.amazonaws.com:8000/insertitem",
+					"host": [
+						"ec2-18-230-17-198",
+						"sa-east-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"insertitem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Asset",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n      \"ID\": \"asset002\",\r\n      \"TipoServ\": \"Varricao\",\r\n      \"BDIServ\": 29.77,\r\n      \"EbisaK\": 0.54,\r\n      \"DataBase\": \"OUT-2019\",\r\n      \"EncargosSocDes\": \"88.28\",\r\n      \"TotalGeral\": 82876.99,\r\n      \"Status\": \"ABERTO\",\r\n      \"Owner\": \"Construtor\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "ec2-18-230-17-198.sa-east-1.compute.amazonaws.com:8000/insertasset",
+					"host": [
+						"ec2-18-230-17-198",
+						"sa-east-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"insertasset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Asset Data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"ID\": \"asset002\",\r\n    \"TipoServ\": \"Varricao\",\r\n    \"BDIServ\": 29.77,\r\n    \"EbisaK\": 0.54,\r\n    \"DataBase\": \"OUT-2020\",\r\n    \"EncargosSocDes\": \"88.28\",\r\n    \"TotalGeral\": 82876.99,\r\n    \"Status\": \"ABERTO\",\r\n    \"Owner\": \"Construtor\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "ec2-18-230-17-198.sa-east-1.compute.amazonaws.com:8000/updateassetdata/asset002",
+					"host": [
+						"ec2-18-230-17-198",
+						"sa-east-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"updateassetdata",
+						"asset002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Asset Status",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n      \"Status\": \"APROVADO\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "ec2-18-230-17-198.sa-east-1.compute.amazonaws.com:8000/updateasset/asset002",
+					"host": [
+						"ec2-18-230-17-198",
+						"sa-east-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"updateasset",
+						"asset002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer Asset",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n      \"newOwner\": \"FISCAL\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "ec2-18-230-17-198.sa-east-1.compute.amazonaws.com:8000/transferasset/asset003",
+					"host": [
+						"ec2-18-230-17-198",
+						"sa-east-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"transferasset",
+						"asset003"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Assets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "ec2-18-230-17-198.sa-east-1.compute.amazonaws.com:8000/getassets",
+					"host": [
+						"ec2-18-230-17-198",
+						"sa-east-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"getassets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Asset",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "ec2-18-230-17-198.sa-east-1.compute.amazonaws.com:8000/getasset/asset002",
+					"host": [
+						"ec2-18-230-17-198",
+						"sa-east-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"getasset",
+						"asset002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Asset Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "ec2-18-230-17-198.sa-east-1.compute.amazonaws.com:8000/getitems/asset002",
+					"host": [
+						"ec2-18-230-17-198",
+						"sa-east-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"getitems",
+						"asset002"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

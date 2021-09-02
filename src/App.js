@@ -5,8 +5,13 @@ import Main from './components/Main';
 function App() {
   return (
     <div> 
+      
 <Router>
-  <Main></Main>
+  <Main 
+    username="Construtor"
+  //  username="Fiscal"
+  // username="Financeiro"
+  />
   </Router>
     </div>
     

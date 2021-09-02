@@ -24,10 +24,8 @@ function Login(props) {
             <input type="password" class="form-control" id="inputPassword" placeholder="Digite sua senha">
             </input>
         </div>
-        <div class="forgot">
-        <a href="reset.html">Perdeu a senha?</a>
-</div>
-        <Link to="/main"></Link>
+        
+        <Link to="/main"/>
         <button type="submit" class="btn btn-primary">Login</button>
 
     </form>
