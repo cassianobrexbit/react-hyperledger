@@ -1,6 +1,11 @@
 import React from 'react';
 
 function TableList(props) {
+    let btn= "OI"
+    if (props.username === "Construtor"){
+      btn = <button className="btn btn-sm btn-outline-success"> <i class="bi-clipboard-check"></i></button> 
+       
+    }
     return (
 <table class="table table-hover">
 <thead className="table-light">
@@ -8,6 +13,7 @@ function TableList(props) {
       <th scope="col" className="text-uppercase">COD</th>
       <th scope="col" className="text-uppercase">Data</th>
       <th scope="col " className="text-center text-uppercase">Status</th>
+      <th scope="col " className="text-center text-uppercase">Ações</th>
     </tr>
   </thead>
   <tbody>
@@ -15,7 +21,7 @@ function TableList(props) {
       <th scope="row">1</th>
       <td>{new Date().toLocaleDateString()}</td>
       <td  className="text-center table-info">Aberta</td>
-      
+      <td>{btn}</td>
     </tr>
     <tr>
       <th scope="row">2</th>

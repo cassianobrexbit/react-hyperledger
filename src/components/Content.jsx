@@ -1,6 +1,6 @@
 import React from 'react';
 import TableList from '../view/ListAllBudgets';
-import RegisterBudget from '../view/RegisterBudget';
+import RegisterItem from '../view/RegisterItem';
 import axios from 'axios';
 
 
@@ -14,8 +14,8 @@ function content(props) {
   return (
         <div className="content-box">
           
-          <TableList></TableList>
-          <RegisterBudget></RegisterBudget>
+          <TableList {...props}/>
+          <RegisterItem></RegisterItem>
         </div>
     );
 }

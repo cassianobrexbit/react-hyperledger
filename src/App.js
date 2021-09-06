@@ -4,7 +4,7 @@ import Main from './components/Main';
 
 function App() {
   return (
-    <div> 
+    <div  style={{paddingTop: 25}}> 
       
 <Router>
   <Main 
