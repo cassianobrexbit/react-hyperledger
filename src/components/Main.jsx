@@ -18,7 +18,7 @@ function Main(props) {
         if(!props.username) {
             return <Login/>
         }
-        console.log("PROPS-> ",props);
+        // console.log("PROPS-> ",props);
         
         // if(props.username === 'Construtor'){
             // btnNewAsset =<button className="btn btn-primary btn-block" onClick={() => modal.show()} >Novo Orçamento</button>
@@ -47,17 +47,17 @@ function Main(props) {
               
             </div>
             <div className="modal-body">
-            <div class="input-group mb-3">
-  <span class="input-group-text" id="basic-addon1">BDI Serv</span>
-  <input type="text" class="form-control" placeholder="BDI" aria-label="BDI" aria-describedby="basic-addon1"/>
+            <div className="input-group mb-3">
+  <span className="input-group-text" id="basic-addon1">BDI Serv</span>
+  <input type="text" className="form-control" placeholder="BDI" aria-label="BDI" aria-describedby="basic-addon1"/>
 </div>
  <div className="input-group mb-3">
-  <span class="input-group-text" id="basic-addon1">EBISA K</span>
-  <input type="text" class="form-control" placeholder="EBISA" aria-label="EBISA" aria-describedby="basic-addon1"/>
+  <span className="input-group-text" id="basic-addon1">EBISA K</span>
+  <input type="text" className="form-control" placeholder="EBISA" aria-label="EBISA" aria-describedby="basic-addon1"/>
  </div>
  <div className="input-group mb-3">
-  <span class="input-group-text" id="basic-addon1">Data Base</span>
-  <input type="date" class="form-control" placeholder="" aria-label="DATA" aria-describedby="basic-addon1"/>
+  <span className="input-group-text" id="basic-addon1">Data Base</span>
+  <input type="date" className="form-control" placeholder="" aria-label="DATA" aria-describedby="basic-addon1"/>
 
 </div>
             </div>
