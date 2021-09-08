@@ -1,9 +1,6 @@
 import React, {  useEffect, useState } from 'react';
 
 
-
-
-
 const RegisterBudget = (props) => {
   const [item , setItem] = useState('');
   const [ref , setRef] = useState('');
@@ -16,7 +13,7 @@ const RegisterBudget = (props) => {
   
 useEffect( () => {
 setValorTotal(qtd*valorTotal)
-console.log("total:",valorTotal);
+// console.log("total:",valorTotal);
 },[])
 
             return(

@@ -8,7 +8,7 @@ function content(props) {
         <div className="content-box">
           
           <TableList {...props}/>
-          <RegisterItem></RegisterItem>
+          {/* <RegisterItem></RegisterItem> */}
         </div>
     );
 }

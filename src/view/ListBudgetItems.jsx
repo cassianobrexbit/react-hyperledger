@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import api from "../components/api";
 
 function BuildItemList (props) {
-  // console.log("BUILDITEM_>",props.item);
+  console.log("BUILDITEM_>",props.item);
+  let valorTotal = 0;
   return(
     
        <div class="card text-center">
@@ -10,7 +11,7 @@ function BuildItemList (props) {
          ORÇAMENTO: {props.budget.Key}
        </div>
        <div class="card-body">
-       <table class="table">
+       <table class="table table-bordered">
        <thead>
          <tr>
            <th scope="col">ItemCod</th>
@@ -24,9 +25,14 @@ function BuildItemList (props) {
      
        
        <tbody>
-      {props.item.map( item => 
+      {props.item.map( item =>
+      {
+        // setvalorTotal(1);
+        valorTotal += parseFloat(item.itemVlrTotalBDI);
+        
+         return(
       <>
-         <tr>
+         <tr key={item._id} id={item._id}>
            <th scope="row">{item.itemCod}</th>
            <td>{item.itemDesc}</td>
            <td>{item.itemUnid}</td>
@@ -35,12 +41,15 @@ function BuildItemList (props) {
            <td> R$ {item.itemVlrTotalBDI} </td>
          </tr>    
       </>
+         )
+      }
+
       )}
       </tbody>
       </table>
       
        <div class="card-footer text-muted">
-         STATUS: {props.budget.Record.Status}
+         Valor Total do Orçamento:  <b>R$ {valorTotal}</b>
       </div>
        </div>
       </div>
