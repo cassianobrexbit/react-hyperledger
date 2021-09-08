@@ -1,4 +1,5 @@
-import React, {  useState } from 'react';
+import React, {  useEffect, useState } from 'react';
+
 
 
 
@@ -13,6 +14,11 @@ const RegisterBudget = (props) => {
   const [valorUnit , setValorUnit] = useState(0);
   const [valorTotal , setValorTotal] = useState(0);
   
+useEffect( () => {
+setValorTotal(qtd*valorTotal)
+console.log("total:",valorTotal);
+},[])
+
             return(
 
             <div>
@@ -58,14 +64,14 @@ const RegisterBudget = (props) => {
   </div>
   <div className="col-md-2">
     <label  className="form-label">Quantidade</label>
-    <input type="number" className="form-control"  onChange={e=> setQTD(e.target.value)} value={qtd}   required/>
+    <input type="number" className="form-control"  onChange={e=> {setQTD(e.target.value); setValorTotal(valorUnit*qtd)}} value={qtd}   required/>
 
   </div>
   <div className="col-md-2">
     <label  className="form-label">Preço Unit. com BDI</label>
     <div className="input-group has-validation">
       <span className="input-group-text">R$</span>
-      <input type="number" step="0.01" className="form-control" id="validationCustomUsername" onChange={e => setValorUnit(e.target.value)} value={valorUnit}  aria-describedby="inputGroupPrepend"  required/>
+      <input type="number" step="0.01" className="form-control" id="validationCustomUsername" onChange={e =>{ setValorUnit(e.target.value); setValorTotal(valorUnit*qtd)}} value={valorUnit}  aria-describedby="inputGroupPrepend"  required/>
     </div>
   </div>
   <div className="col-md-2">

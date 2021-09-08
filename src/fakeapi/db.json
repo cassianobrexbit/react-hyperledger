@@ -30,9 +30,9 @@
             }
             },
             {
-                "Key": "39",
+                "Key": "41",
                 "Record": {
-                "ID": "39",
+                "ID": "41",
                 "TipoServ": "Varricao",
                 "BDIServ": "29.77",
                 "EbisaK": "0.54",
@@ -43,5 +43,47 @@
                 "Owner": "Construtor"
                 }
             }
+            ],
+            "items": [
+                {
+                    "_id": "6138cdcf2d8f04358cfa9705",
+                    "assetId": "41",
+                    "itemRef": "item001",
+                    "itemCod": "nomedoitem",
+                    "itemDesc": "asset4",
+                    "itemUnid": "m2",
+                    "itemQuant": 0,
+                    "itemPrecUnit": 0,
+                    "itemVlrTotalBDI": 10,
+                    "itemId": 37
+                },
+                {
+                    "_id": "6138d1122d8f04358cfa9706",
+                    "assetId": "41",
+                    "itemRef": "item001",
+                    "itemCod": "nomedoitem",
+                    "itemDesc": "teste desc.",
+                    "itemUnid": "m2",
+                    "itemQuant": 2,
+                    "itemPrecUnit": 49.9,
+                    "itemVlrTotalBDI": 4,
+                    "itemId": 38
+                },
+                {
+                    "_id": "6138d1242d8f04358cfa9707",
+                    "assetId": "41",
+                    "itemRef": "item001",
+                    "itemCod": "nomedoitem",
+                    "itemDesc": "teste desc.",
+                    "itemUnid": "m2",
+     
+                   "itemQuant": 2,
+                    "itemPrecUnit": 49.9,
+                    "itemVlrTotalBDI": 99.8,
+                    "itemId": 39
+                }
+
             ]
+
+            
     }
