@@ -2,22 +2,27 @@ import React, { useState, useEffect , useRef } from 'react';
 import Content from './Content';
 import Login from './auth/Login';
 import { Modal } from 'bootstrap';
+import { useLocation } from 'react-router-dom';
 
 
 
 function Main(props) {
+  const location = useLocation();
+  console.log(location);
+  let username = "Anônimo"
+  const [modal, setModal] = useState(null);
+  const newAssetModal = useRef();
+  useEffect(() => {
+    setModal(
+      new Modal(newAssetModal.current)
+      )
+    }, [])
 
-    const [modal, setModal] = useState(null);
-    const newAssetModal = useRef();
-    useEffect(() => {
-        setModal(
-            new Modal(newAssetModal.current)
-            )
-        }, [])
-        
-        if(!props.username) {
-            return <Login/>
-        }
+          location.state ? username = location?.state.username : username = "Anônimo"
+            
+        // if(!props.username) {
+        //     return <Login/>
+        // }
         // console.log("PROPS-> ",props);
         
         // if(props.username === 'Construtor'){
@@ -25,7 +30,7 @@ function Main(props) {
             // } 
             
         let btnNewAsset;
-        props.username === 'Construtor' ? 
+        username === 'Construtor' ? 
         btnNewAsset =<button className="btn btn-primary btn-block" onClick={() => modal.show()} >Novo Orçamento</button>
         :
         btnNewAsset =<button className="btn btn-secondary btn-block" disabled >Novo Orçamento</button>
@@ -35,7 +40,7 @@ function Main(props) {
         <div className="container-fluid">
             <div className="row">
                 <div className="col-2 " style={{paddingTop: 10}}>
-                 Bem-vindo {props.username}
+                 Bem-vindo {username}
                     <div className="content" style={{paddingTop: 25}}>
 
                 {btnNewAsset}
@@ -72,7 +77,7 @@ function Main(props) {
                     
                 </div>
                 <div className="col-8 card">
-            <Content {...props} />
+            <Content {...props} username={username} />
 
                 </div>
                 <div className="col-2">
