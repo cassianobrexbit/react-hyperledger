@@ -28,21 +28,24 @@ function BuildItemList (props) {
       {props.item.map( item =>
       {
         // setvalorTotal(1);
-        valorTotal += parseFloat(item.itemVlrTotalBDI);
         
-         return(
-      <>
-         <tr key={item._id} id={item._id}>
-           <th scope="row">{item.itemCod}</th>
-           <td>{item.itemDesc}</td>
-           <td>{item.itemUnid}</td>
-           <td> R$ {item.itemPrecUnit} </td>
-           <td> {item.itemQuant} </td>
-           <td> R$ {item.itemVlrTotalBDI} </td>
-         </tr>    
-      </>
-         )
-      }
+        if(item.assetId == props.budget.Key) 
+        {
+           valorTotal += parseFloat(item.itemVlrTotalBDI);
+           return(
+        <>
+           <tr key={item._id} id={item._id}>
+             <th scope="row" key={item._id}>{item.itemCod}</th>
+             <td>{item.itemDesc}</td>
+             <td>{item.itemUnid}</td>
+             <td> R$ {item.itemPrecUnit} </td>
+             <td> {item.itemQuant} </td>
+             <td> R$ {item.itemVlrTotalBDI} </td>
+           </tr>    
+        </>
+           )
+        }
+         }
 
       )}
       </tbody>
