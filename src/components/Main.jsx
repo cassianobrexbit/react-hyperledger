@@ -1,16 +1,34 @@
 import React, { useState, useEffect , useRef } from 'react';
 import Content from './Content';
-import Login from './auth/Login';
 import { Modal } from 'bootstrap';
 import { useLocation } from 'react-router-dom';
+import api from './api';
 
 
+async function createBudget(bdi, ebisa , data){
+  if(bdi && ebisa && data){
 
+    api.post(`assets/`, {
+      Record:{
+        TipoServ: "Varricao",
+        BDIServ: bdi,
+        EbisaK: ebisa,
+        DataBase: data,
+        Status: 'ABERTO'
+      }
+    })
+    .then( console.log("Posted."))
+    .catch(err => console.log(err))
+  }
+  }
 function Main(props) {
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
   let username = "Anônimo"
   const [modal, setModal] = useState(null);
+  const [ebisak , setEbisak] = useState();
+  const [date , setDate] = useState();
+  const [BDI , setBDI] = useState();
   const newAssetModal = useRef();
   useEffect(() => {
     setModal(
@@ -20,14 +38,6 @@ function Main(props) {
 
           location.state ? username = location?.state.username : username = "Anônimo"
             
-        // if(!props.username) {
-        //     return <Login/>
-        // }
-        // console.log("PROPS-> ",props);
-        
-        // if(props.username === 'Construtor'){
-            // btnNewAsset =<button className="btn btn-primary btn-block" onClick={() => modal.show()} >Novo Orçamento</button>
-            // } 
             
         let btnNewAsset;
         username === 'Construtor' ? 
@@ -54,21 +64,25 @@ function Main(props) {
             <div className="modal-body">
             <div className="input-group mb-3">
   <span className="input-group-text" id="basic-addon1">BDI Serv</span>
-  <input type="text" className="form-control" placeholder="BDI" aria-label="BDI" aria-describedby="basic-addon1"/>
+  <input type="text" className="form-control" placeholder="BDI" aria-label="BDI" value={BDI} onChange={e => setBDI(e.target.value)}/>
 </div>
  <div className="input-group mb-3">
   <span className="input-group-text" id="basic-addon1">EBISA K</span>
-  <input type="text" className="form-control" placeholder="EBISA" aria-label="EBISA" aria-describedby="basic-addon1"/>
+  <input type="text" className="form-control" placeholder="EBISA" aria-label="EBISA" value={ebisak} onChange={e => setEbisak(e.target.value)}/>
  </div>
  <div className="input-group mb-3">
   <span className="input-group-text" id="basic-addon1">Data Base</span>
-  <input type="date" className="form-control" placeholder="" aria-label="DATA" aria-describedby="basic-addon1"/>
+  <input type="date" className="form-control" placeholder="" aria-label="DATA" min={new Date()}  onChange={e => setDate(e.target.valueAsDate)}/>
 
 </div>
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" onClick={() => modal.hide()}>Fechar</button>
-              <button type="button" className="btn btn-primary">Salvar</button>
+              <button type="button" className="btn btn-primary" onClick={() => {
+              let database = date?.toLocaleString('pt-BR', {month: 'short', year: 'numeric'});   
+              createBudget(BDI,ebisak,database)
+              .then(modal.hide())
+              .catch(err=> console.log(err));} }>Salvar</button>
             </div>
           </div>
         </div>
