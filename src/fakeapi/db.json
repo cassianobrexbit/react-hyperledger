@@ -1,88 +1,107 @@
+{
+  "assets": [
     {
-        
-        "assets": [
-            {
-            "Key": "2ad5af50-5bad-4a3e-a32b-2709f1847159",
-            "Record": {
-            "ID": "2ad5af50-5bad-4a3e-a32b-2709f1847159",
-            "TipoServ": "Varricao",
-            "BDIServ": "29.77",
-            "EbisaK": "0.54",
-            "DataBase": "OUT-2019",
-            "EncargosSocDes": "88.28",
-            "TotalGeral": "9500.99",
-            "Status": "ABERTO",
-            "Owner": "Construtor"
-            }
-            },
-            {
-            "Key": "94dc3865-fad0-4447-9278-6eecdb1b54ca",
-            "Record": {
-            "ID": "94dc3865-fad0-4447-9278-6eecdb1b54ca",
-            "TipoServ": "Varricao",
-            "BDIServ": "29.77",
-            "EbisaK": "0.54",
-            "DataBase": "OUT-2019",
-            "EncargosSocDes": "88.28",
-            "TotalGeral": "9500.99",
-            "Status": "ANALISE FISCAL",
-            "Owner": "Construtor"
-            }
-            },
-            {
-                "Key": "41",
-                "Record": {
-                "ID": "41",
-                "TipoServ": "Varricao",
-                "BDIServ": "29.77",
-                "EbisaK": "0.54",
-                "DataBase": "OUT-2021",
-                "EncargosSocDes": "99.28",
-                "TotalGeral": "1500.99",
-                "Status": "ANALISE FINANCEIRO",
-                "Owner": "Construtor"
-                }
-            }
-            ],
-            "items": [
-                {
-                    "_id": "6138cdcf2d8f04358cfa9705",
-                    "assetId": "41",
-                    "itemRef": "item001",
-                    "itemCod": "nomedoitem",
-                    "itemDesc": "asset4",
-                    "itemUnid": "m2",
-                    "itemQuant": 0,
-                    "itemPrecUnit": 0,
-                    "itemVlrTotalBDI": 10,
-                    "itemId": 37
-                },
-                {
-                    "_id": "6138d1122d8f04358cfa9706",
-                    "assetId": "41",
-                    "itemRef": "item001",
-                    "itemCod": "nomedoitem",
-                    "itemDesc": "teste desc.",
-                    "itemUnid": "m2",
-                    "itemQuant": 2,
-                    "itemPrecUnit": 49.9,
-                    "itemVlrTotalBDI": 4,
-                    "itemId": 38
-                },
-                {
-                    "_id": "6138d1242d8f04358cfa9707",
-                    "assetId": "41",
-                    "itemRef": "item001",
-                    "itemCod": "nomedoitem",
-                    "itemDesc": "teste desc.",
-                    "itemUnid": "m2",
-                   "itemQuant": 2,
-                    "itemPrecUnit": 49.9,
-                    "itemVlrTotalBDI": 99.8,
-                    "itemId": 39
-                }
-
-            ]
-
-            
+      "Key": "94dc3865-fad0-4447-9278-6eecdb1b54ca",
+      "Record": {
+        "ID": "94dc3865-fad0-4447-9278-6eecdb1b54ca",
+        "TipoServ": "Varricao",
+        "BDIServ": "29.77",
+        "EbisaK": "0.54",
+        "DataBase": "OUT-2019",
+        "EncargosSocDes": "88.28",
+        "TotalGeral": "9500.99",
+        "Status": "ANALISE FISCAL",
+        "Owner": "Construtor"
+      }
+    },
+    {
+      "Key": "41",
+      "Record": {
+        "ID": "41",
+        "TipoServ": "Varricao",
+        "BDIServ": "29.77",
+        "EbisaK": "0.54",
+        "DataBase": "OUT-2021",
+        "EncargosSocDes": "99.28",
+        "TotalGeral": "1500.99",
+        "Status": "ANALISE FINANCEIRO",
+        "Owner": "Construtor"
+      }
+    },
+    {
+      "Key": "42",
+      "Record": {
+        "ID": "42",
+        "TipoServ": "Varricao",
+        "BDIServ": "29.77",
+        "EbisaK": "0.54",
+        "DataBase": "OUT-2021",
+        "EncargosSocDes": "99.28",
+        "TotalGeral": "1500.99",
+        "Status": "ABERTO",
+        "Owner": "Construtor"
+      }
+    },
+    {
+      "Record": {
+        "TipoServ": "Varricao",
+        "BDIServ": "0.225",
+        "EbisaK": "55",
+        "DataBase": "dez. de 2021"
+      },
+      "Key": "UHrmqf8"
+    },
+    {
+      "Record": {
+        "TipoServ": "Varricao",
+        "BDIServ": "test",
+        "EbisaK": "testou",
+        "DataBase": "set. de 2021",
+        "Status": "ABERTO"
+      },
+      "Key": "akWSSsj"
+    },
+    {
+      "Status": "ANALISE FISCAL",
+      "Key": "7TgLtQX"
     }
+  ],
+  "items": [
+    {
+      "_id": "6138cdcf2d8f04358cfa9705",
+      "assetId": "41",
+      "itemRef": "item001",
+      "itemCod": "nomedoitem",
+      "itemDesc": "asset4",
+      "itemUnid": "m2",
+      "itemQuant": 0,
+      "itemPrecUnit": 0,
+      "itemVlrTotalBDI": 10,
+      "itemId": 37
+    },
+    {
+      "_id": "6138d1122d8f04358cfa9706",
+      "assetId": "41",
+      "itemRef": "item001",
+      "itemCod": "nomedoitem",
+      "itemDesc": "teste desc.",
+      "itemUnid": "m2",
+      "itemQuant": 2,
+      "itemPrecUnit": 49.9,
+      "itemVlrTotalBDI": 4,
+      "itemId": 38
+    },
+    {
+      "_id": "6138d1242d8f04358cfa9707",
+      "assetId": "41",
+      "itemRef": "item001",
+      "itemCod": "nomedoitem",
+      "itemDesc": "teste desc.",
+      "itemUnid": "m2",
+      "itemQuant": 2,
+      "itemPrecUnit": 49.9,
+      "itemVlrTotalBDI": 99.8,
+      "itemId": 39
+    }
+  ]
+}

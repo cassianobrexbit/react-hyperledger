@@ -29,12 +29,12 @@ function BuildItemList (props) {
       {
         // setvalorTotal(1);
         
-        if(item.assetId == props.budget.Key) 
+        if(item.assetId === props.budget.Key) 
         {
            valorTotal += parseFloat(item.itemVlrTotalBDI);
            return(
         <>
-           <tr key={item._id} id={item._id}>
+           <tr>
              <th scope="row" key={item._id}>{item.itemCod}</th>
              <td>{item.itemDesc}</td>
              <td>{item.itemUnid}</td>
@@ -45,6 +45,7 @@ function BuildItemList (props) {
         </>
            )
         }
+        return null
          }
 
       )}
