@@ -6,12 +6,12 @@ function BuildItemList (props) {
   let valorTotal = 0;
   return(
     
-       <div class="card text-center">
-       <div class="card-header">
+       <div className="card text-center">
+       <div className="card-header">
          ORÇAMENTO: {props.budget.Key}
        </div>
-       <div class="card-body">
-       <table class="table table-bordered">
+       <div className="card-body">
+       <table className="table table-bordered">
        <thead>
          <tr>
            <th scope="col">ItemCod</th>
@@ -52,7 +52,7 @@ function BuildItemList (props) {
       </tbody>
       </table>
       
-       <div class="card-footer text-muted">
+       <div className="card-footer text-muted">
          Valor Total do Orçamento:  <b>R$ {valorTotal}</b>
       </div>
        </div>

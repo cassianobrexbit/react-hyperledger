@@ -102,6 +102,17 @@
       "itemPrecUnit": 49.9,
       "itemVlrTotalBDI": 99.8,
       "itemId": 39
+    },
+    {
+      "Key": 10,
+      "assetId": "akWSSsj",
+      "itemRef": "test",
+      "itemCod": "test",
+      "itemDesc": "123",
+      "itemUnid": "M³",
+      "itemQuant": "13",
+      "itemPrecUnit": "4",
+      "itemVlrTotalBDI": 52
     }
   ]
 }
