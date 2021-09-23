@@ -5,17 +5,18 @@ import { useLocation } from 'react-router-dom';
 import api from './api';
 
 
-async function createBudget(bdi, ebisa , data){
+async function createBudget(bdi, ebisa , data, tipoServ){
   if(bdi && ebisa && data){
 
-    api.post(`assets/`, {
-      Record:{
-        TipoServ: "Varricao",
+    api.post(`insertasset/`, {
+      //Record:{
+        TipoServ: tipoServ,
         BDIServ: bdi,
         EbisaK: ebisa,
         DataBase: data,
-        Status: 'ABERTO'
-      }
+        Status: 'ABERTO',
+        TotalGeral:0
+      //}
     })
     .then( console.log("Posted."))
     .catch(err => console.log(err))
@@ -29,6 +30,7 @@ function Main(props) {
   const [ebisak , setEbisak] = useState();
   const [date , setDate] = useState();
   const [BDI , setBDI] = useState();
+  const [tipoServ , setTipoServ] = useState();
   const newAssetModal = useRef();
   useEffect(() => {
     setModal(
@@ -66,6 +68,10 @@ function Main(props) {
   <span className="input-group-text" id="basic-addon1">BDI Serv</span>
   <input type="text" className="form-control" placeholder="BDI" aria-label="BDI" value={BDI} onChange={e => setBDI(e.target.value)}/>
 </div>
+<div className="input-group mb-3">
+  <span className="input-group-text" id="basic-addon1">Tipo Serviço</span>
+  <input type="text" className="form-control" placeholder="Tipo Serviço" aria-label="tipoServ" value={tipoServ} onChange={e => setTipoServ(e.target.value)}/>
+</div>
  <div className="input-group mb-3">
   <span className="input-group-text" id="basic-addon1">EBISA K</span>
   <input type="text" className="form-control" placeholder="EBISA" aria-label="EBISA" value={ebisak} onChange={e => setEbisak(e.target.value)}/>
@@ -80,7 +86,7 @@ function Main(props) {
               <button type="button" className="btn btn-secondary" onClick={() => modal.hide()}>Fechar</button>
               <button type="button" className="btn btn-primary" onClick={() => {
               let database = date?.toLocaleString('pt-BR', {month: 'short', year: 'numeric'});   
-              createBudget(BDI,ebisak,database)
+              createBudget(BDI,ebisak,database, tipoServ)
               .then(modal.hide())
               .catch(err=> console.log(err));} }>Salvar</button>
             </div>

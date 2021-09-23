@@ -29,8 +29,8 @@ function BuildItemList (props) {
       {
         // setvalorTotal(1);
         
-        if(item.assetId === props.budget.Key) 
-        {
+        // if(item.assetId === props.budget.Key) 
+        // {
            valorTotal += parseFloat(item.itemVlrTotalBDI);
            return(
         <>
@@ -44,7 +44,7 @@ function BuildItemList (props) {
            </tr>    
         </>
            )
-        }
+        //}
         return null
          }
 
@@ -63,10 +63,13 @@ function BuildItemList (props) {
 
 const ListAllItems = (props) => {
     const [ itemList , setItemList] = useState([]);
+    console.log('PROPS ->', props.budget.Key)
     useEffect( () => {
-        api.get('/items/')
+        console.log('PRINTEDURL', `/getitems/${props.budget.Key}`)
+        api.get(`/getitems/${props.budget.Key}`)
         .then(function (response) {
-        setItemList(response.data)
+        console.log('RESPONSE->', response)
+        setItemList(response.data.items)
         // console.log("ITEMLIST>",itemList);
           
         })

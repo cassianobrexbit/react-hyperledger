@@ -7,7 +7,7 @@ const [list, setList] = useState([]);
 
     
     useEffect( () => {
-      api.get('/assets')
+      api.get('/getassets')
       .then(function (response) {
       setList(response.data)
         return response.data

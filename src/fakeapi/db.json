@@ -1,18 +1,8 @@
 {
   "assets": [
     {
-      "Key": "94dc3865-fad0-4447-9278-6eecdb1b54ca",
-      "Record": {
-        "ID": "94dc3865-fad0-4447-9278-6eecdb1b54ca",
-        "TipoServ": "Varricao",
-        "BDIServ": "29.77",
-        "EbisaK": "0.54",
-        "DataBase": "OUT-2019",
-        "EncargosSocDes": "88.28",
-        "TotalGeral": "9500.99",
-        "Status": "ANALISE FISCAL",
-        "Owner": "Construtor"
-      }
+      "Status": "ANALISE FINANCEIRO",
+      "Key": "94dc3865-fad0-4447-9278-6eecdb1b54ca"
     },
     {
       "Key": "41",
@@ -64,6 +54,16 @@
     {
       "Status": "ANALISE FISCAL",
       "Key": "7TgLtQX"
+    },
+    {
+      "Record": {
+        "TipoServ": "Varricao",
+        "BDIServ": "30",
+        "EbisaK": "45",
+        "DataBase": "set. de 2021",
+        "Status": "ABERTO"
+      },
+      "Key": "GR8Bi7j"
     }
   ],
   "items": [

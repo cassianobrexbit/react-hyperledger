@@ -6,7 +6,7 @@ import api from '../components/api';
 
 
 function updateStatus(budgetID,status){
-   api.put(`assets/${budgetID}`, { Status: `${status}` })
+   api.put(`updateasset/${budgetID}`, { Status: `${status}` })
   .then(() => console.log("updated"))
   .catch(err => console.log("erro ao atualizar: ",err));
 }
@@ -25,6 +25,7 @@ const BuildList = (props) =>
   <tr>
     <th scope="col" className="text-uppercase">COD</th>
     <th scope="col" className="text-uppercase">Data</th>
+    <th scope="col " className="text-center text-uppercase">Tipo Serviço</th>
     <th scope="col " className="text-center text-uppercase">Status</th>
     <th scope="col " className="text-center text-uppercase">Ações</th>
   </tr>
@@ -35,8 +36,9 @@ const BuildList = (props) =>
           <th scope="row" >{budget.Key}</th>
          
           <td>{budget.Record?.DataBase}</td>
+          <td className="text-center ">{budget.Record?.TipoServ}</td>
           <td  className="text-center table-info">{budget.Record?.Status}</td>
-          <td>
+          <td className="text-center">
           {props.username === 'Anônimo' ? 
           <>
           <Link to='/login'>

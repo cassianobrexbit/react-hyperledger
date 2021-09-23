@@ -3,16 +3,16 @@ import api from '../components/api';
 
 function createNewItem(itemBudget, budgetID) {
   // console.log("updated.",itemBudget,budgetID);
-  api.post(`items/`, {
-    Key: 10,
+  api.post(`insertitem/`, {
+    //Key: 10,
     assetId: budgetID,
     itemRef: itemBudget.ref,
     itemCod: itemBudget.cod,
     itemDesc: itemBudget.disc,
     itemUnid: itemBudget.uM,
     itemQuant: itemBudget.qtd,
-    itemPrecUnit: itemBudget.valorUnit,
-    itemVlrTotalBDI: itemBudget.valorTotal
+    itemPrecUnit: itemBudget.valorUnit
+    //itemVlrTotalBDI: itemBudget.valorTotal
   })
   .then(() => console.log("updated."))
   .catch(err => console.log("erro na request: ",err));
