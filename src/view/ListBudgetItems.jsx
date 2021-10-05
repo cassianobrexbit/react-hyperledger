@@ -27,10 +27,7 @@ function BuildItemList (props) {
        <tbody>
       {props.item.map( item =>
       {
-        // setvalorTotal(1);
-        
-        // if(item.assetId === props.budget.Key) 
-        // {
+
            valorTotal += parseFloat(item.itemVlrTotalBDI);
            return(
         <>
@@ -45,7 +42,6 @@ function BuildItemList (props) {
         </>
            )
         //}
-        return null
          }
 
       )}
@@ -76,7 +72,7 @@ const ListAllItems = (props) => {
         .catch(function (error) {
           console.log("GET ITEM ERROR->",error);
         })     
-      }, [])
+      }, [props])
 
 
       if(itemList){

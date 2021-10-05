@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import ListAllItems from '../view/ListBudgetItems';
 import RegisterItem from '../view/RegisterItem'
 import api from '../components/api';
+import ListBudgetHistory from '../view/ListBudgetHistory';
 
 
 function updateStatus(budgetID,status){
@@ -101,7 +102,7 @@ const BuildList = (props) =>
 
 </tbody>
   </table>   
-  {showItemList ?<ListAllItems budget={budget} /> : null}
+  {showItemList ? <><ListAllItems budget={budget}/> <div className="container" style ={{paddingTop: 50}}><ListBudgetHistory budget={budget}/></div></> : null}
   {showNewItem ? <RegisterItem id={itemID}/> : null}
   </>
  
