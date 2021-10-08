@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import api from "../components/api";
 
+
+
 function BuildItemList (props) {
   console.log("BUILDITEM_>",props.item);
   let valorTotal = 0;
@@ -43,7 +45,7 @@ function BuildItemList (props) {
            )
         //}
          }
-
+        
       )}
       </tbody>
       </table>

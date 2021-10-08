@@ -19,7 +19,7 @@ function Login(props) {
         </div>
         <div className="form-group">
         <label htmlFor="username" className="text-dark">Senha</label>
-            <input type="password" className="form-control" id="inputPassword" placeholder="Digite sua senha">
+            <input type="password" className="form-control" value="1234567890" id="inputPassword" placeholder="Digite sua senha">
             </input>
         </div>
         <Link to={{
